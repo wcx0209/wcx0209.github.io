@@ -1,5 +1,6 @@
-body {
+body, html {
   font-family: Arial, sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
   color: #333;
@@ -38,28 +39,31 @@ nav ul li a {
   color: #fff;
 }
 
-.zebra {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.parallax {
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.zebra-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.zebra-item:nth-child(odd) {
+.bg1 {
   background-color: #000;
   color: #fff;
 }
 
-.zebra-item:nth-child(even) {
+.bg2 {
   background-color: #fff;
   color: #000;
+}
+
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
